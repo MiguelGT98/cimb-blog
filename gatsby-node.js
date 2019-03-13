@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
                     slug {
                         current
                     }
+                    title
                 }
             }
         }
@@ -22,6 +23,8 @@ exports.createPages = ({ graphql, actions }) => {
                 path: `blog/${node.slug.current}`,
                 component: path.resolve(`./src/templates/blogPost.js`),
                 context:{
+                    blog: true,
+                    title: node.title,
                     id: node.id
                 }
             })
