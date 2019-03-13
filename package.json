@@ -5,7 +5,9 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "bulma": "^0.7.4",
     "dotenv": "^6.2.0",
+    "font-awesome": "^4.7.0",
     "gatsby": "^2.1.18",
     "gatsby-image": "^2.0.30",
     "gatsby-plugin-google-fonts": "0.0.4",

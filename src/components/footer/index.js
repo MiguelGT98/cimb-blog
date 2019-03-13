@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'bulma/css/bulma.css'
+
 import './index.css';
 
 function index() {
