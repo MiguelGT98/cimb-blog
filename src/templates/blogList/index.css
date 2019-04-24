@@ -1,0 +1,76 @@
+.blog-list h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 24px 48px;
+  color: #122c47;
+}
+
+.blog-list .grid-container {
+  max-height: 500px;
+  width: 92%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "first first first second second" "first first first second second" "first first first third third" "first first first third third";
+  grid-gap: 12px;
+  margin: 0 auto 24px auto;
+}
+
+.first {
+  grid-area: first;
+}
+
+.second {
+  grid-area: second;
+}
+
+.third {
+  grid-area: third;
+}
+
+.blog-preview {
+  border-radius: 4px;
+  position: relative;
+}
+
+.blog-preview img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.blog-preview a {
+  position: absolute;
+  bottom: 12px;
+  color: #ffffff;
+  text-shadow: 1px 1px #122c47;
+  left: 24px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .blog-preview a {
+    font-size: 12px;
+    left: 12px;
+  }
+}
+.blog-navigation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 240px;
+  margin: 24px auto;
+}
+
+.blog-navigation-item.current,
+.blog-navigation-item a:hover {
+  font-size: 24px;
+  font-weight: 700;
+  color: #122c47;
+}
