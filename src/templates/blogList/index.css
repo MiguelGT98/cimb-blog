@@ -1,3 +1,21 @@
+@keyframes tilt {
+  0% {
+    transform: scale(1.0125) skewY(1.5deg);
+  }
+  25% {
+    transform: scale(1.025) skewY(-1.5deg);
+  }
+  50% {
+    transform: scale(1.0125) skewY(1.5deg);
+  }
+  75% {
+    transform: scale(1.025) skewY(-1.5deg);
+  }
+  100% {
+    transform: scale(1) skewY(0deg);
+  }
+}
+
 .blog-list h2 {
   font-size: 24px;
   font-weight: 700;
@@ -6,7 +24,7 @@
 }
 
 .blog-list .grid-container {
-  max-height: 500px;
+  max-height: 60vh;
   width: 92%;
   max-width: 1200px;
   display: grid;
@@ -30,8 +48,15 @@
 }
 
 .blog-preview {
-  border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 5px;
   position: relative;
+}
+
+.blog-preview:hover {
+  animation: 1s ease 0s 1 normal forwards tilt;
+  box-shadow: rgba(0, 0, 0, 0.25) 10px 14px 20px;
+  transition-delay: 0s !important;
 }
 
 .blog-preview img {
@@ -43,21 +68,39 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 }
 
-.blog-preview a {
+.blog-preview .title {
   position: absolute;
   bottom: 12px;
   color: #ffffff;
   text-shadow: 1px 1px #122c47;
-  left: 24px;
-  font-size: 24px;
+  left: 18px;
+  padding-right: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 @media (max-width: 768px) {
-  .blog-preview a {
+  .blog-preview .title {
     font-size: 12px;
     left: 12px;
+    padding-right: 12px;
+  }
+
+  .blog-preview.first .title {
+    font-size: 16px;
+    left: 12px;
+    padding-right: 12px;
+  }
+
+  .blog-list .grid-container {
+    max-height: 50vh;
+    min-width: 320px;
+    min-height: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "first first" "first first" "first first" "second third" "second third";
   }
 }
 .blog-navigation-wrapper {
@@ -66,11 +109,12 @@
   justify-content: space-around;
   max-width: 240px;
   margin: 24px auto;
+  font-size: 18px;
 }
 
 .blog-navigation-item.current,
 .blog-navigation-item a:hover {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #122c47;
 }

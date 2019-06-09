@@ -11,3 +11,9 @@ body {
   height: auto;
   font-family: "Montserrat", sans-serif;
 }
+
+@media (max-width: 768px) {
+  body{
+    margin: 0 auto;
+  }
+}

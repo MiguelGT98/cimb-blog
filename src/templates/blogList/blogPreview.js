@@ -8,8 +8,10 @@ const blogPreview = ({ path, title, mainImage, n }) => {
         n === 1 ? "first" : n === 2 ? "second" : "third"
       }`}
     >
-      <img src={mainImage} />
-      <Link to={path}>{title}</Link>
+      <Link to={path}>
+        <img src={mainImage} />
+        <p className="title">{title}</p>
+      </Link>
     </div>
   )
 }
