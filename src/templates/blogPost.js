@@ -4,10 +4,11 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer/index"
+import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 import "./blogPost.css"
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({location, data }) => {
   const dateOptions = {
     weekday: "long",
     year: "numeric",
@@ -28,6 +29,12 @@ const BlogPost = ({ data }) => {
       <Navbar />
       <div className="blog-post">
         <SEO title={title} />
+        <Breadcrumb
+          location={location}
+          crumbLabel={title}
+          crumbStyle={{ color: "#666" }}
+          crumbActiveStyle={{ color: "blue" }}
+        />
         <img className="mainImage" src={mainImage.asset.url} />
         <div className="details">
           <span className="date">
@@ -88,4 +95,5 @@ export const query = graphql`
     }
   }
 `
+
 export default BlogPost

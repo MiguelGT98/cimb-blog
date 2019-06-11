@@ -5,6 +5,8 @@ import "./index.css"
 
 import Layout from "../../components/layout"
 import BlogPreview from "./blogPreview"
+import { Breadcrumb } from "gatsby-plugin-breadcrumb"
+
 
 export default class BlogList extends React.Component {
   render() {
@@ -27,7 +29,7 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <div className="blog-list">
-          <h2>Nuestro blog.</h2>
+          <h2>Nuestro blog</h2>
           <div className="grid-container">
             {this.props.data.allSitePage.edges.map((node, index) => {
               return (

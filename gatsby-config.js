@@ -46,7 +46,8 @@ module.exports = {
           `Montserrat\:300,400,400i,700` // you can also specify font weights and styles
         ]
       }
-    }
+    },
+    `gatsby-plugin-breadcrumb`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
