@@ -16,10 +16,14 @@
   }
 }
 
+.blog-list{
+  margin: 48px;
+}
+
 .blog-list h2 {
   font-size: 24px;
   font-weight: 700;
-  margin: 0 0 24px 48px;
+  margin: 0 0 24px 0;
   color: #122c47;
 }
 
@@ -101,6 +105,10 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "first first" "first first" "first first" "second third" "second third";
+  }
+
+  .blog-list{
+    margin: 24px;
   }
 }
 .blog-navigation-wrapper {

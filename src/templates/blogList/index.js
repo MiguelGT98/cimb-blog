@@ -7,10 +7,10 @@ import Layout from "../../components/layout"
 import BlogPreview from "./blogPreview"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
-
 export default class BlogList extends React.Component {
   render() {
     const { currentPage, numPages } = this.props.pageContext
+    const { location } = this.props
     const numberPagesBetween = numPages - currentPage
     let pagesBetween
 
@@ -29,6 +29,12 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <div className="blog-list">
+          <Breadcrumb
+            location={location}
+            crumbLabel={"Blog"}
+            crumbStyle={{ color: "#ccc" }}
+            crumbActiveStyle={{ color: "#122c47" }}
+          />
           <h2>Nuestro blog</h2>
           <div className="grid-container">
             {this.props.data.allSitePage.edges.map((node, index) => {

@@ -32,8 +32,8 @@ const BlogPost = ({location, data }) => {
         <Breadcrumb
           location={location}
           crumbLabel={title}
-          crumbStyle={{ color: "#666" }}
-          crumbActiveStyle={{ color: "blue" }}
+          crumbStyle={{ color: "#ccc" }}
+          crumbActiveStyle={{ color: "#122c47" }}
         />
         <img className="mainImage" src={mainImage.asset.url} />
         <div className="details">
