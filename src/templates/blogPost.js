@@ -22,7 +22,7 @@ const BlogPost = ({location, data }) => {
     author,
     mainImage,
     body,
-    createdAt,
+    publishedAt,
   } = data.sanityPost
   return (
     <div>
@@ -38,7 +38,7 @@ const BlogPost = ({location, data }) => {
         <img className="mainImage" src={mainImage.asset.url} />
         <div className="details">
           <span className="date">
-            {new Date(createdAt).toLocaleDateString("es-MX", dateOptions)}
+            {new Date(publishedAt).toLocaleDateString("es-MX", dateOptions)}
           </span>
           <h3 className="author">por {author.name}</h3>
         </div>
@@ -66,7 +66,7 @@ export const query = graphql`
   query($id: String!) {
     sanityPost(id: { eq: $id }) {
       id
-      createdAt: _createdAt
+      publishedAt
       slug {
         current
       }

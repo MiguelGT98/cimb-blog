@@ -17,3 +17,44 @@ body {
     margin: 0 auto;
   }
 }
+.content {
+  display: block;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 92%;
+  padding-top: 2rem;
+  padding-bottom: 3rem !important;
+}
+.breadcrumbs ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.8625rem;
+  height: 40px;
+}
+.breadcrumbs.videos {
+  display: block;
+  margin: 0 auto;
+  width: 92%;
+  max-width: 960px;
+}
+
+.breadcrumbs.videos ul {
+  justify-content: flex-start;
+}
+
+.breadcrumbs.videos ul li {
+  margin-right: 2rem;
+}
+.slider {
+  display: block;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 92%;
+  margin-top: 1rem;
+}
+
+.slider img {
+  width: 100%;
+  object-fit: cover;
+}

@@ -15,12 +15,13 @@ function index() {
                 <div class="footer-center">
                     <h3>Mapa del sitio</h3>
                     <ul>
-                        <li><a href="http://cimb.com.mx/">Inicio</a></li>
-                        <li><a href="http://cimb.com.mx/proyectos/index.html">Proyectos</a></li>
-                        <li><a href="http://cimb.com.mx/videos/index.html">Videos</a></li>
-                        <li><a href="http://cimb.com.mx/divulgacion/index.html">Divulgación</a></li>
-                        <li><a href="http://cimb.com.mx/equipo/index.html">Equipo de investigación</a></li>
-                        <li><a href="http://cimb.com.mx/contacto/index.html">Contacto</a></li>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/proyectos/">Proyectos</a></li>
+                        <li><a href="/videos/">Videos</a></li>
+                        <li><a href="/divulgacion/">Divulgación</a></li>
+                        <li><a href="/equipo/">Equipo de investigación</a></li>
+                        <li><a href="/contacto/">Contacto</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-right">

@@ -8,6 +8,18 @@ exports.createPages = ({ graphql, actions }) => {
       allSanityPost {
         edges {
           node {
+            categories {
+              title
+            }
+            author {
+              name
+            }
+            body {
+              children{
+                text
+              }
+            }
+            publishedAt
             id
             slug {
               current
@@ -28,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
     const numPages = Math.ceil(posts.length / postsPerPage)
 
     result.data.allSanityPost.edges.forEach(({ node }) => {
+      console.log(node)
       createPage({
         path: `post/${node.slug.current}`,
         component: path.resolve(`./src/templates/blogPost.js`),
@@ -36,6 +49,10 @@ exports.createPages = ({ graphql, actions }) => {
           title: node.title,
           id: node.id,
           mainImage: node.mainImage.asset.url,
+          categories: node.categories,
+          author: node.author.name,
+          description:node.body[0],
+          date: node.publishedAt,
         },
       })
     })

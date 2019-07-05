@@ -36,10 +36,14 @@ export default class BlogList extends React.Component {
             crumbActiveStyle={{ color: "#122c47" }}
           />
           <h2>Nuestro blog</h2>
-          <div className="grid-container">
+          <div className="blog-container">
             {this.props.data.allSitePage.edges.map((node, index) => {
               return (
                 <BlogPreview
+                  author={node.node.context.author}
+                  description={node.node.context.description}
+                  categories={node.node.context.categories}
+                  date={node.node.context.date}
                   path={node.node.path}
                   title={node.node.context.title}
                   mainImage={node.node.context.mainImage}
@@ -82,17 +86,23 @@ export default class BlogList extends React.Component {
 
 export const blogListQuery = graphql`
   query blogPostsQuery($skip: Int!, $limit: Int!) {
-    allSitePage(
-      filter: { context: { blog: { eq: true } } }
-      limit: $limit
-      skip: $skip
-    ) {
+    allSitePage(filter: {context: {blog: {eq: true}}}, sort: {fields: [context___date], order: DESC}, limit: $limit, skip: $skip) {
       edges {
         node {
           context {
+            date
             blog
             title
             mainImage
+            author
+            description {
+              children {
+                text
+              }
+            }
+            categories {
+              title
+            }
           }
           path
         }
