@@ -5,6 +5,8 @@ import './navbar.css';
 
 import $ from 'jquery';
 
+import {Link} from 'gatsby'
+
 class navbar extends React.Component {
 
   componentDidMount(){
@@ -35,7 +37,7 @@ class navbar extends React.Component {
     return (
         <nav className="navbar">
             <div class="navbar-brand">
-            <a class="navbar-item" href="./index.html"><img id="logo-cimb" src="http://cimb.com.mx/img/logos/logo-cimb.png" /></a>
+            <Link class="navbar-item" to="/index.html"><img id="logo-cimb" src="http://cimb.com.mx/img/logos/logo-cimb.png" /></Link>
                 <div class="navbar-burger burger" data-target="mainNav">
                     <span></span>
                     <span></span>
@@ -48,29 +50,29 @@ class navbar extends React.Component {
 
                 </div>
                 <div class="navbar-end">
-                    <a class="navbar-item" href="/">
+                    <Link class="navbar-item" to="/">
                         Inicio
-                    </a>
-                    <a class="navbar-item" href="/proyectos/">
+                    </Link>
+                    <Link class="navbar-item" to="/proyectos/">
                         Proyectos
-                    </a>
-                    <a class="navbar-item" href="/videos/">
+                    </Link>
+                    <Link class="navbar-item" to="/videos/">
                         Videos
-                    </a>
-                    <a class="navbar-item" href="/divulgacion/">
+                    </Link>
+                    <Link class="navbar-item" to="/divulgacion/">
                         Divulgación
-                    </a>
-                    <a class="navbar-item" href="/equipo/">
+                    </Link>
+                    <Link class="navbar-item" to="/equipo/">
                         Equipo de Investigación
-                    </a>
-                    <a class="navbar-item" href="/contacto/">
+                    </Link>
+                    <Link class="navbar-item" to="/contacto/">
                         Contacto
-                    </a>
-                    <a class="navbar-item" href="/blog/">
+                    </Link>
+                    <Link class="navbar-item" to="/blog/">
                         Blog
-                    </a>
-                    <a class="navbar-item" href="/index-eng.html">
-                        Eng/Esp</a>
+                    </Link>
+                    <Link class="navbar-item" to="/index-eng.html">
+                        Eng/Esp</Link>
                 </div>
             </div>
         </nav>

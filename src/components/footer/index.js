@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from 'gatsby'
+
 import 'bulma/css/bulma.css'
 
 import './index.css';
@@ -10,18 +12,18 @@ function index() {
             <footer>
                 <div class="footer-left">
                     <a href="https://tec.mx/es" target="_blank"><img src="http://cimb.com.mx/img/logos/logo-tec-largo.png" /></a>
-                    <a href="../index.html"><img src="http://cimb.com.mx/img/logos/logo-cimb.png" /></a>
+                    <Link to="/index.html"><img src="http://cimb.com.mx/img/logos/logo-cimb.png" /></Link>
                 </div>
                 <div class="footer-center">
                     <h3>Mapa del sitio</h3>
                     <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/proyectos/">Proyectos</a></li>
-                        <li><a href="/videos/">Videos</a></li>
-                        <li><a href="/divulgacion/">Divulgación</a></li>
-                        <li><a href="/equipo/">Equipo de investigación</a></li>
-                        <li><a href="/contacto/">Contacto</a></li>
-                        <li><a href="/blog/">Blog</a></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/proyectos/">Proyectos</Link></li>
+                        <li><Link to="/videos/">Videos</Link></li>
+                        <li><Link to="/divulgacion/">Divulgación</Link></li>
+                        <li><Link to="/equipo/">Equipo de investigación</Link></li>
+                        <li><Link to="/contacto/">Contacto</Link></li>
+                        <li><Link to="/blog/">Blog</Link></li>
                     </ul>
                 </div>
                 <div class="footer-right">

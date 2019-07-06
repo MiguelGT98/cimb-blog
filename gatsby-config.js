@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 module.exports = {
+  pathPrefix: `/blogver`,
   siteMetadata: {
     title: `Centro de Investigación de Microsistemas y Biodiseño`,
     description: `Página Web CIMB`,

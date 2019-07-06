@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import MdCalendar from "react-ionicons/lib/MdCalendar"
 import MdPerson from "react-ionicons/lib/MdPerson"
-import MdPriceTags from "react-ionicons/lib/MdPriceTags"
+import MdPriceTags from "react-ionicons/lib/MdPricetags"
 
 
 const blogPreview = ({ path, title, mainImage, n, date, author, description, categories}) => {
