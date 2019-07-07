@@ -50,29 +50,30 @@ class navbar extends React.Component {
 
                 </div>
                 <div class="navbar-end">
-                    <Link class="navbar-item" to="/">
+                    <a class="navbar-item" href="/">
                         Inicio
-                    </Link>
-                    <Link class="navbar-item" to="/proyectos/">
+                    </a>
+                    <a class="navbar-item" href="../proyectos/index.html">
                         Proyectos
-                    </Link>
-                    <Link class="navbar-item" to="/videos/">
+                    </a>
+                    <a class="navbar-item" href="../videos/index.html">
                         Videos
-                    </Link>
-                    <Link class="navbar-item" to="/divulgacion/">
+                    </a>
+                    <a class="navbar-item" href="../divulgacion/index.html">
                         Divulgación
-                    </Link>
-                    <Link class="navbar-item" to="/equipo/">
+                    </a>
+                    <a class="navbar-item" href="../equipo/index.html">
                         Equipo de Investigación
-                    </Link>
-                    <Link class="navbar-item" to="/contacto/">
+                    </a>
+                    <a class="navbar-item" href="../contacto/index.html">
                         Contacto
-                    </Link>
-                    <Link class="navbar-item" to="/blog/">
+                    </a>
+                    <a class="navbar-item" href="../blog/index.html">
                         Blog
-                    </Link>
-                    <Link class="navbar-item" to="/index-eng.html">
-                        Eng/Esp</Link>
+                    </a>
+                    <a class="navbar-item" href="index-eng.html">
+                        Eng/Esp
+                    </a>
                 </div>
             </div>
         </nav>
